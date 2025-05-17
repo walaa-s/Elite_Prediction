@@ -73,7 +73,8 @@ streamlit run app.py
 ## 📁 Project Structure
 
 ```
-├── app.py                      # Streamlit frontend
+├── Streamlit_prediction.py     # Streamlit frontend
+├── Project_week_4              # Model Development
 ├── train_cleaned_final.csv     # Main dataset
 ├── best_model_extreme_age.pkl  # Trained model
 ├── scaler_extreme_age.pkl      # Feature scaler
