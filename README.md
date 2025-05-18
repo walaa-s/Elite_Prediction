@@ -3,6 +3,8 @@
 > Can we predict who will finish their program and who will quit?  
 > With a little machine learning magic — **yes, we can.**
 
+#Try It:
+   https://eliteprediction.streamlit.app/
 ---
 
 ## 🚀 What This Project Does
