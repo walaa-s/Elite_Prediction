@@ -9,9 +9,9 @@ import re
 st.set_page_config(page_title="Student Completion Predictor", layout="wide")
 
 # --- Load Model Artifacts ---
-model = joblib.load("best_model_extreme_age.pkl")
-scaler = joblib.load("scaler_extreme_age.pkl")
-label_encoders = joblib.load("label_encoders_extreme_age.pkl")
+#model = joblib.load("best_model_extreme_age.pkl")
+#scaler = joblib.load("scaler_extreme_age.pkl")
+#label_encoders = joblib.load("label_encoders_extreme_age.pkl")
 
 # --- Load Age Mapping ---
 age_data = pd.read_csv("train_cleaned_final.csv")[['Program Sub Category Code', 'Age Range by Program']].drop_duplicates()
