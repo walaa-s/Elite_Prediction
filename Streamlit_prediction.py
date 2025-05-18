@@ -9,12 +9,12 @@ import re
 st.set_page_config(page_title="Student Completion Predictor", layout="wide")
 
 # --- Load Model Artifacts ---
-model = joblib.load("/Users/mohannedalsahaf/iCloud Drive (Archive)/Mac Desktop/Tuwaiq Data Science Bootcamp/best_model_extreme_age.pkl")
-scaler = joblib.load("/Users/mohannedalsahaf/iCloud Drive (Archive)/Mac Desktop/Tuwaiq Data Science Bootcamp/scaler_extreme_age.pkl")
-label_encoders = joblib.load("/Users/mohannedalsahaf/iCloud Drive (Archive)/Mac Desktop/Tuwaiq Data Science Bootcamp/label_encoders_extreme_age.pkl")
+model = joblib.load("best_model_extreme_age.pkl")
+scaler = joblib.load("scaler_extreme_age.pkl")
+label_encoders = joblib.load("label_encoders_extreme_age.pkl")
 
 # --- Load Age Mapping ---
-age_data = pd.read_csv("/Users/mohannedalsahaf/iCloud Drive (Archive)/Mac Desktop/Tuwaiq Data Science Bootcamp/train_cleaned_final.csv")[['Program Sub Category Code', 'Age Range by Program']].drop_duplicates()
+age_data = pd.read_csv("train_cleaned_final.csv")[['Program Sub Category Code', 'Age Range by Program']].drop_duplicates()
 age_map = dict(zip(age_data['Program Sub Category Code'], age_data['Age Range by Program']))
 
 # --- Optional: Background ---
@@ -40,7 +40,7 @@ def set_background(png_file):
         </style>
     """, unsafe_allow_html=True)
 
-set_background("/Users/mohannedalsahaf/iCloud Drive (Archive)/Mac Desktop/Tuwaiq Data Science Bootcamp/Tuwaiq_mounten.png")
+set_background("Tuwaiq_mounten.png")
 
 # --- Title & Layout ---
 st.title("🎓 Will the Student Complete the Program?")
