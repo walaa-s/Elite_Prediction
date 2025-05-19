@@ -17,11 +17,6 @@ label_encoders = joblib.load("label_encoders_extreme_age.pkl")
 age_data = pd.read_csv("train_cleaned_final.csv")[['Program Sub Category Code', 'Age Range by Program']].drop_duplicates()
 age_map = dict(zip(age_data['Program Sub Category Code'], age_data['Age Range by Program']))
 
-# --- Optional: Background ---
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        return base64.b64encode(f.read()).decode()
-
 def set_background_from_url(image_url):
     st.markdown(
         f"""
