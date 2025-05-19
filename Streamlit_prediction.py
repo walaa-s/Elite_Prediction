@@ -40,7 +40,7 @@ def set_background(png_file):
         </style>
     """, unsafe_allow_html=True)
 
-set_background("Tuwaiq_mounten.png")
+#set_background("Tuwaiq_mounten.png")
 
 # --- Title & Layout ---
 st.title("🎓 Will the Student Complete the Program?")
