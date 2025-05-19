@@ -22,12 +22,12 @@ def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         return base64.b64encode(f.read()).decode()
 
-def set_background(png_file):
-    bin_str = get_base64_of_bin_file(png_file)
-    st.markdown(f"""
+def set_background_from_url(image_url):
+    st.markdown(
+        f"""
         <style>
         .stApp {{
-            background-image: url("data:image/png;base64,{bin_str}");
+            background-image: url("{image_url}");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -38,9 +38,13 @@ def set_background(png_file):
             font-weight: bold;
         }}
         </style>
-    """, unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True
+    )
 
-#set_background("Tuwaiq_mounten.png")
+
+set_background_from_url("https://tuwaiq.edu.sa/img/Tuwaiq_mounten.png")
+
 
 # --- Title & Layout ---
 st.title("🎓 Will the Student Complete the Program?")
