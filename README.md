@@ -1,3 +1,13 @@
+This project was developed as a team effort by:
+- Mohanned Alsahaf
+- Abdullah Alhuthaily
+- Abdulrahman Al-Abbas
+- Walaa Almajnuni
+- Razan Alhussainan
+
+
+
+
 # 🎓 Student Completion Predictor
 
 > Can we predict who will finish their program and who will quit?  
